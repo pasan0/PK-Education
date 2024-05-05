@@ -41,32 +41,8 @@
                   <p style="font-size: 15px;font-style: italic;color: #5d2020;">Unlock your learning potential with our comprehensive educational platform, where knowledge meets innovation.</p>
                 </div>
             </div>
-            <!-- <div class="row1">
-              <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
-                <div class="image-container">
-                  <q-img src="../assets/col1.jpg" style="width: 100%;" />
-                  <router-link to="/technology" style="text-decoration: none;" v-slot="{ navigate }">
-                    <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="TECHNOLOGY" icon="biotech" />
-                  </router-link>
-                </div>
-              </div>
-              <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
-                <div class="image-container">
-                  <q-img src="../assets/col2.jpg" style="width: 100%; height: 110%;" />
-                  <router-link to="/sports" style="text-decoration: none;" v-slot="{ navigate }">
-                    <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="SPORTS" icon="sports_soccer" />
-                  </router-link>
-                </div>
-              </div>
-              <div class="col-md-4 d-flex flex-column align-center" style="margin-top: 10px;">
-                <div class="image-container">
-                  <q-img src="../assets/col3.jpg" style="width: 100%;" />
-                  <router-link to="/movies" style="text-decoration: none;" v-slot="{ navigate }">
-                    <q-btn class="q-mt-md go-to-button" @click="navigate" stretch flat label="MOVIES" icon="theaters"/>
-                  </router-link>
-                </div>
-              </div>
-            </div> -->
+            
+
           </q-page>
         </q-page-container>
       </q-layout>
