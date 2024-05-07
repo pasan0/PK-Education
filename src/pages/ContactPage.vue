@@ -2,29 +2,23 @@
   <div>
     <q-layout view="lHh Lpr lFf">
       <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%;">
-      <q-separator dark vertical inset />
+        <q-separator dark vertical inset />
+        <q-space />
+        <q-separator dark vertical />
+        <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+          <q-btn @click="navigate" stretch flat label="Home" icon="home" />
+        </router-link>
+        <q-separator dark vertical />
+        <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+          <q-btn @click="navigate" stretch flat label="About" icon="error" />
+        </router-link>
+        <q-separator dark vertical />
+        <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+          <q-btn @click="navigate" stretch flat label="Contact" icon="call"/>
+        </router-link>
+        <q-separator dark vertical />
+      </q-toolbar>
 
-      <q-space />
-
-      <q-separator dark vertical />
-
-      <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="Home" icon="home" />
-      </router-link>
-      <q-separator dark vertical />
-
-      <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="About" icon="error" />
-      </router-link>
-      <q-separator dark vertical />
-
-      <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="Contact" icon="call"/>
-      </router-link>
-<q-separator dark vertical />
-
-
-    </q-toolbar>
       <q-page-container>
         <div>
           <q-splitter
@@ -89,18 +83,58 @@
         </div>
       </q-page-container>
     </q-layout>
+
+    <!-- Bootstrap footer -->
+    <footer class="text-center text-white" style="background-color: #3f51b5">
+      <!-- Grid container -->
+      <div class="container d-flex flex-column justify-content-center align-items-center">
+        <!-- Section: Social -->
+        <section class="text-center mb-5" style="padding-top: 10px; align-items: center;">
+          <a href="https://www.facebook.com/pkauushalya.pk/" class="text-white me-4" style="margin-right: 30px;">
+            <font-awesome-icon :icon="['fab', 'facebook-f']" style="font-size: 20px;" />
+          </a>
+          <a href="https://twitter.com/PasanKWeerasin1" class="text-white me-4" style="margin-right: 30px;">
+            <font-awesome-icon :icon="['fab', 'twitter']" style="font-size: 20px;" />
+          </a>
+          <a href="https://www.linkedin.com/in/pasan-k-weerasinghe-25242725b/" class="text-white me-4" style="margin-right: 30px;">
+            <font-awesome-icon :icon="['fab', 'linkedin-in']" style="font-size: 20px;" />
+          </a>
+          <a href="https://github.com/pasan0" class="text-white me-4" style="margin-right: 30px;">
+            <font-awesome-icon :icon="['fab', 'github']" style="font-size: 20px;" />
+          </a>
+        </section>
+        <!-- Section: Social -->
+
+        <!-- Footer text -->
+        <div class="text-center text-white pt-3">
+          &copy; 2024 - Pasan K Weerasinghe
+        </div>
+        <!-- End of Footer text -->
+      </div>
+      <!-- End of Grid container -->
+    </footer>
+    <!-- End of Footer -->
   </div>
 </template>
 
-<script >
+<script setup>
 import { ref } from 'vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFacebookF, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-export default {
-  setup () {
-    return {
-      tab: ref('mails'),
-      splitterModel: ref(20)
-    }
-  }
-}
+// Add icons to the library
+library.add(faFacebookF, faTwitter, faLinkedinIn, faGithub)
+
+const drawer = ref(false)
+
+// Define variables directly
+const tab = ref('mails');
+const splitterModel = ref(20);
 </script>
+
+<style scoped>
+.full-width {
+  width: 100%;
+}
+</style>
