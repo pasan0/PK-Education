@@ -54,17 +54,17 @@
                     Got questions, feedback, or just want to say hello?<br> We're all ears! Drop us a line at <br><span style="font-weight: bolder; font-size: 24px;"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new">pasanweerasinghe62@gmail.com</a></span><br> and our dedicated team will get back to you as soon as possible. Whether it's about our products, services, or anything else, we're here to help. Looking forward to hearing from you!<br><br>
 
                     Best regards,<br>
-                    PK WEB DESIGNERS</p>
+                    <span style="font-weight: 800; font-style: italic; font-size: 17px;">PK Education</span></p>
                 </q-tab-panel>
 
                 <q-tab-panel name="alarms">
                   <div class="text-h4 q-mb-md">Phone</div>
                   <p>📞 Contact Us:<br><br>
 
-                    Have a question or need assistance? <br>Feel free to give us a call at <br><span style="font-weight: bolder; font-size: 26px;" >+94 705171702</span><br> Our friendly team is ready to assist you with any inquiries you may have regarding our products, services, or anything else. We're here to help make your experience with us exceptional. Looking forward to hearing from you!<br><br>
+                    Have a question or need assistance? <br>Feel free to give us a call at <br><span style="font-weight: bolder; font-size: 26px; color: darkblue;" >+94 705171702</span><br> Our friendly team is ready to assist you with any inquiries you may have regarding our products, services, or anything else. We're here to help make your experience with us exceptional. Looking forward to hearing from you!<br><br>
 
                     Best regards,<br>
-                    PK WEB DESIGNERS</p>
+                    <span style="font-weight: 800; font-style: italic; font-size: 17px;">PK Education</span></p>
                 </q-tab-panel>
 
                 <q-tab-panel name="movies">
@@ -74,7 +74,7 @@
                     Got questions, feedback, or just want to stay updated?<br> Follow us on <br><span style="font-weight: bolder; font-size: 26px;"> <a href="https://www.facebook.com/pkauushalya.pk?mibextid=ZbWKwL">Facebook</a></span><br> for the latest news, updates, and to reach out directly. Our team is here to assist you with any inquiries you may have. Drop us a message, leave a comment, or simply give us a like! We look forward to connecting with you on social media.<br><br>
 
                     Best regards,<br>
-                    PK WEB DESIGNERS</p>
+                    <span style="font-weight: 800; font-style: italic; font-size: 17px;">PK Education</span></p>
                 </q-tab-panel>
               </q-tab-panels>
             </template>
@@ -85,7 +85,7 @@
     </q-layout>
 
     <!-- Bootstrap footer -->
-    <footer class="text-center text-white" style="background-color: #3f51b5">
+    <footer class="text-center text-white" style="background-color: #0d47a1 ">
       <!-- Grid container -->
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <!-- Section: Social -->

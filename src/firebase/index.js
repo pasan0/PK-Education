@@ -1,11 +1,11 @@
 // src/firebase/index.js
 
-import { initializeApp } from "firebase/app"
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from 'firebase/storage';
-import { getAuth, onAuthStateChanged } from "firebase/auth"
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase } from "firebase/database"; // Import the getDatabase function
-import { LocalStorage } from 'quasar'
+import { LocalStorage } from 'quasar';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -18,19 +18,21 @@ const firebaseConfig = {
   measurementId: "G-GSQWJE60PJ"
 };
 
-
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
-export const storage = getStorage();
-export const rtdb = getDatabase(app); // Initialize the Realtime Database
+ export const app = initializeApp(firebaseConfig);
+ export const auth = getAuth(app);
+ export const db = getFirestore(app);
+ export const storage = getStorage();
+ export const rtdb = getDatabase(app); // Initialize the Realtime Database
 
+// Firestore Configuration
+export const firestore = db; // Export Firestore
 
+// Auth State Change Listener
 onAuthStateChanged(auth, (user) => {
- if (user) {
-  LocalStorage.set('user', user)
- } else {
-  LocalStorage.remove('user')
- }
+  if (user) {
+    LocalStorage.set('user', user);
+  } else {
+    LocalStorage.remove('user');
+  }
 });

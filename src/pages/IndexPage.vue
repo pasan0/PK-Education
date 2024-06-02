@@ -38,10 +38,12 @@
           </div>
         </q-page>
       </q-page-container>
+
     </q-layout>
 
+
     <!-- Bootstrap footer -->
-    <footer class="text-center text-white" style="background-color: #3f51b5">
+    <footer class="text-center text-white" style="background-color: #0d47a1 ">
       <!-- Grid container -->
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <!-- Section: Social -->

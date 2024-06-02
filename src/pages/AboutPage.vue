@@ -30,7 +30,7 @@
         <q-page class="q-pa-md">
           <div class="q-gutter-md">
             <div class="q-col-gutter-md">
-              <div class="text-h6 bg-blue-10 text-white p-2">About Us</div>
+              <div class="text-h6 bg-blue-10 text-white p-2" style="font-size: 30px;">About Us</div>
               <div class="bg-blue-10 text-white p-2 ml-10">
                 <div>
               <img src="../assets/OIG3..jpg" style="align-items: center; width: 20%; ">
@@ -41,7 +41,7 @@ With a team of passionate educators, technologists, and visionaries, we strive t
 
 At the heart of our approach lies a deep-rooted belief in the transformative power of education. We champion inclusivity, diversity, and accessibility, ensuring that every individual, regardless of background or circumstance, has the opportunity to thrive. By fostering a culture of continuous improvement and innovation, we seek to inspire a lifelong love for learning and equip future generations with the skills they need to thrive in an ever-evolving world.<br><br>
 
-Join us on our mission to ignite minds, elevate aspirations, and build a brighter tomorrow through the power of education. Together, let's embark on a journey of discovery, growth, and endless possibilities.</div>
+Join us on our mission to ignite minds, elevate aspirations, and build a brighter tomorrow through the power of education. Together, let's embark on a journey of discovery, growth, and endless possibilities.<br><br></div>
 
             </div>
           </div>
@@ -50,7 +50,7 @@ Join us on our mission to ignite minds, elevate aspirations, and build a brighte
     </q-layout>
 
     <!-- Bootstrap footer -->
-    <footer class="text-center text-white" style="background-color: #3f51b5">
+    <footer class="text-center text-white" style="background-color: #0d47a1 ">
       <!-- Grid container -->
       <div class="container d-flex flex-column justify-content-center align-items-center">
         <!-- Section: Social -->
