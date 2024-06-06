@@ -1,23 +1,22 @@
 <template>
   <div>
     <q-layout view="lHh Lpr lFf">
-      <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%;">
-        <q-separator dark vertical inset />
-        <q-space />
-        <q-separator dark vertical />
-        <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="Home" icon="home" />
-        </router-link>
-        <q-separator dark vertical />
-        <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="About" icon="error" />
-        </router-link>
-        <q-separator dark vertical />
-        <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-          <q-btn @click="navigate" stretch flat label="Contact" icon="call"/>
-        </router-link>
-        <q-separator dark vertical />
-      </q-toolbar>
+      <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%; display: flex; justify-content: flex-end;">
+<q-space />
+
+  <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="Home" icon="home" />
+  </router-link>
+
+  <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="About" icon="error" />
+  </router-link>
+
+  <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="Contact" icon="call" />
+  </router-link>
+</q-toolbar>
+
 
       <q-page-container>
         <div>

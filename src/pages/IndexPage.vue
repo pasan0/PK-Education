@@ -1,45 +1,91 @@
 <template>
   <div class="page-container">
-    <q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%; display: flex; justify-content: flex-end;">
-      <q-separator dark vertical inset />
+<q-toolbar class="bg-blue-10 text-white shadow-2" style="height: 80%; display: flex; justify-content: flex-end;">
+  <q-space />
 
-      <q-space />
+  <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="Home" icon="home" />
+  </router-link>
 
-      <q-separator dark vertical />
+  <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="About" icon="error" />
+  </router-link>
 
-      <router-link to="/home" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="Home" icon="home" />
-      </router-link>
-      <q-separator dark vertical />
+  <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
+    <q-btn @click="navigate" stretch flat label="Contact" icon="call" />
+  </router-link>
 
-      <router-link to="/about" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="About" icon="error" />
-      </router-link>
-      <q-separator dark vertical />
+  <q-btn @click="logoutAction" stretch flat label="LogOut" icon="logout" />
 
-      <router-link to="/contact" class="text-white" style="text-decoration: none;" v-slot="{ navigate }">
-        <q-btn @click="navigate" stretch flat label="Contact" icon="call" />
-      </router-link>
-      <q-separator dark vertical />
+</q-toolbar>
 
-      <q-btn @click="logoutAction" stretch flat label="LogOut" icon="logout" />
 
-      <q-separator dark vertical />
-    </q-toolbar>
 
     <q-layout view="lHh Lpr lFf">
       <q-page-container>
         <q-page class="q-pa-md" style="margin: 0px;">
           <div class="row q-gutter-md" style="background: #dfeefb; display: flex;">
-            <div class="text" style="width: 75%;">
-              <h1><span style="font-weight: 400;">Welcome to</span> <span style="font-size: 50px; ">PK Education</span></h1>
-              <p style="font-size: 15px;font-style: italic;color: #5d2020;">Unlock your learning potential with our comprehensive educational platform, where knowledge meets innovation.</p>
+            <div class="text" style="width: 95%;">
+              <h1><span style="font-weight: 400; font-size: 45px; ">Welcome to</span> <span style="font-size: 46px; ">PK Education</span></h1>
+              <p style="font-size: 15px;font-style: italic;color: #5d2020; font-weight: 500;">Unlock Your Learning Potential With Our Comprehensive Educational Platform, Where Knowledge Meets Innovation.<br><br></p>
             </div>
           </div>
-        </q-page>
-      </q-page-container>
 
-    </q-layout>
+<!-- carousel -->
+<div class="q-pa-md full-view-carousel">
+    <q-carousel
+      animated
+      v-model="slide"
+      navigation
+      infinite
+      :autoplay="autoplay"
+      arrows
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      @mouseenter="autoplay = false"
+      @mouseleave="autoplay = true"
+    >
+      <q-carousel-slide :name="1">
+        <img src="https://th.bing.com/th/id/R.369dd4b29d357ae13fd51f5da20385b9?rik=%2bzyhgTLtniALQQ&riu=http%3a%2f%2fwww.vacateachers.org%2fwp-content%2fuploads%2f2018%2f03%2fmaxresdefault.jpg&ehk=jQTPJ%2fumlxh2AMrdQBs5evOT8roeNJ9vzf2k5M0t22o%3d&risl=&pid=ImgRaw&r=0" class="carousel-img" />
+      </q-carousel-slide>
+      <q-carousel-slide :name="2">
+        <img src="https://aslia.com.au/wp-content/uploads/Educational-Image.jpg" class="carousel-img" />
+      </q-carousel-slide>
+      <q-carousel-slide :name="3">
+        <img src="https://www.buhave.com/wp-content/uploads/2019/05/education.jpg" class="carousel-img" />
+      </q-carousel-slide>
+      <q-carousel-slide :name="4">
+        <img src="https://thumbs.dreamstime.com/z/educational-concept-quality-education-sign-page-183404713.jpg" class="carousel-img" />
+      </q-carousel-slide>
+    </q-carousel>
+  </div>
+
+<!-- live class button -->
+    <div class="q-pa-md">
+      <q-btn color="blue" class="full-width" label="Join to Live Class" style="margin: 2px;"  @click="goToLink" />
+         <q-tooltip class="bg-accent">Live</q-tooltip>
+    </div>
+
+<!-- Tab  -->
+    <div class="q-pa-md">
+    <div class="q-gutter-y-md" style="max-width: 100%; ">
+      <q-tabs
+        v-model="tab"
+        narrow-indicator
+        dense
+        align="justify"
+        class="text-secondary"
+      >
+        <q-tab :ripple="{ color: 'orange' }" name="mails" icon="mail" label="Documents" />
+        <q-tab :ripple="{ color: 'orange' }" name="movies" icon="movie" label="Recordings" />
+        <q-tab :ripple="{ color: 'orange' }" name="alarms" icon="alarm" label="TimeTable" />
+      </q-tabs>
+    </div>
+  </div>
+
+</q-page>
+</q-page-container>
+</q-layout>
 
 
     <!-- Bootstrap footer -->
@@ -80,6 +126,17 @@ import { ref } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookF, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+const tab = ref('mails')
+
+
+const slide = ref(1)
+const autoplay = ref(true)
+
+// Live class link
+const goToLink = () => {
+  window.location.href = '#';
+}
 
 // Add icons to the library
 library.add(faFacebookF, faTwitter, faLinkedinIn, faGithub)
@@ -145,4 +202,16 @@ p {
   font-style: italic;
   padding: 5px 10px;
 }
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; Ensure the images cover the slide area */
+}
+
+.full-view-carousel {
+  width: 100%;
+}
+
+
 </style>
