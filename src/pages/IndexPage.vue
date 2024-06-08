@@ -67,8 +67,8 @@
     </div>
 
 <!-- Tab  -->
-    <div class="q-pa-md">
-    <div class="q-gutter-y-md" style="max-width: 100%; ">
+<div class="q-pa-md">
+    <div class="q-gutter-y-md" style="max-width: 100%;">
       <q-tabs
         v-model="tab"
         narrow-indicator
@@ -76,10 +76,39 @@
         align="justify"
         class="text-secondary"
       >
-        <q-tab :ripple="{ color: 'orange' }" name="mails" icon="mail" label="Documents" />
-        <q-tab :ripple="{ color: 'orange' }" name="movies" icon="movie" label="Recordings" />
-        <q-tab :ripple="{ color: 'orange' }" name="alarms" icon="alarm" label="TimeTable" />
+        <q-tab :ripple="{ color: 'orange' }" name="documents" icon="mail" label="Documents" />
+        <q-tab :ripple="{ color: 'orange' }" name="recordings" icon="movie" label="Recordings" />
+        <q-tab :ripple="{ color: 'orange' }" name="timetable" icon="alarm" label="TimeTable" />
       </q-tabs>
+
+      <q-tab-panels v-model="tab" animated>
+        <q-tab-panel name="documents">
+          <!-- Content for Documents tab -->
+          <div>
+            <h3>Documents</h3>
+            <p>Here you can manage your documents.</p>
+            <!-- Add more content as needed -->
+          </div>
+        </q-tab-panel>
+
+        <q-tab-panel name="recordings">
+          <!-- Content for Recordings tab -->
+          <div>
+            <h3>Recordings</h3>
+            <p>Here you can manage your recordings.</p>
+            <!-- Add more content as needed -->
+          </div>
+        </q-tab-panel>
+
+        <q-tab-panel name="timetable">
+          <!-- Content for TimeTable tab -->
+          <div>
+            <h3>TimeTable</h3>
+            <p>Here you can view and manage your timetable.</p>
+            <!-- Add more content as needed -->
+          </div>
+        </q-tab-panel>
+      </q-tab-panels>
     </div>
   </div>
 
@@ -127,7 +156,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faFacebookF, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-const tab = ref('mails')
+const tab = ref('documents'); // default active tab
+
+// If you need to change the tab later in your script, you can do so like this:
+tab.value = 'mails'; // update the tab value
 
 
 const slide = ref(1)
