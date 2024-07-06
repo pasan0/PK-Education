@@ -19,9 +19,7 @@
 
 </q-toolbar>
 
-
-
-    <q-layout view="lHh Lpr lFf">
+<q-layout view="lHh Lpr lFf">
       <q-page-container>
         <q-page class="q-pa-md" style="margin: 0px;">
           <div class="row q-gutter-md" style="background: #dfeefb; display: flex;">
@@ -244,6 +242,4 @@ p {
 .full-view-carousel {
   width: 100%;
 }
-
-
 </style>

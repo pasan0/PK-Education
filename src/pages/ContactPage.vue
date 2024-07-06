@@ -60,7 +60,9 @@
                   <div class="text-h4 q-mb-md">Phone</div>
                   <p>📞 Contact Us:<br><br>
 
-                    Have a question or need assistance? <br>Feel free to give us a call at <br><span style="font-weight: bolder; font-size: 26px; color: darkblue;" >+94 705171702</span><br> Our friendly team is ready to assist you with any inquiries you may have regarding our products, services, or anything else. We're here to help make your experience with us exceptional. Looking forward to hearing from you!<br><br>
+                    Have a question or need assistance? <br>Feel free to give us a call at <br><span style="font-weight: bolder; font-size: 26px; color: darkblue;" >+94 70 51 71702</span><br> 
+                    <span style="font-weight: bolder; font-size: 26px; color: darkblue;" >+94 70 66 71702</span>
+                    <br>Our friendly team is ready to assist you with any inquiries you may have regarding our products, services, or anything else. We're here to help make your experience with us exceptional. Looking forward to hearing from you!<br><br>
 
                     Best regards,<br>
                     <span style="font-weight: 800; font-style: italic; font-size: 17px;">PK Education</span></p>
